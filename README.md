@@ -28,3 +28,4 @@ Compile with `$ csc Ledger.cs` which generates `Ledger.exe`. Then `$ ./Ledger.ex
 * correct use of public/private classes/methods/props?
 * struct vs class for Transaction?
 * should we store `balance`?
+* walk through [msdocs coding conventions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions) and make sure your code flies
