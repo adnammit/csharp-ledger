@@ -72,6 +72,14 @@ namespace Ledger {
             // load all user and transaction data
         }
 
+        // auto-login
+        public void logIn(string username, string first, string last) {
+            Client user = new Client(username, first, last);
+            user.WelcomeUser();
+            this.currUser = user;
+        }
+
+
         public void logIn() {
             string username;
             string first;
@@ -101,13 +109,37 @@ namespace Ledger {
             }
 
             Client user = new Client(username, first, last);
-            // Person user = new Person(username, first, last);
             user.WelcomeUser();
+            this.currUser = user;
+        }
+
+        // purpose is to get a valid input from the user and return an enum value that correlates to an action
+        public string menu() {
+            string selection;
+            do {
+                Console.WriteLine();
+                Console.WriteLine("Please select an option:");
+                Console.WriteLine("D - Make a deposit");
+                Console.WriteLine("W - Make a withdrawal");
+                Console.WriteLine("B - Check your balance");
+                Console.WriteLine("T - View transaction history");
+                Console.WriteLine("Q - End your session");
+                selection = Console.ReadLine();
+                //parse, print if failure
+            } while (selection.Length==0);
+            return selection;
         }
 
         public void run() {
-            Console.WriteLine("Press any key to end your session.");
-            Console.ReadLine();
+            string selection = this.menu();
+            Console.WriteLine("we have selected {0}", selection);
+            // int continue = 1;
+            // while(continue) {
+            //     operation = this.menu();
+            //     if(operation.Equals("Q"))
+            //
+            //     // do action
+            // }
         }
     }
 
@@ -117,9 +149,15 @@ namespace Ledger {
 
             // our lovely 'database'
             string file = "bankstuff.txt";
-
             Session session = new Session(file);
-            session.logIn();
+
+            // If we passed in the auto-login flag, login as our test user
+            // DELETE WHEN DONE
+            if(args.Length > 0 && (args[0].Equals("-l") || args[0].Equals("--auto-login")))
+                session.logIn("", "", "");
+            else
+                session.logIn();
+
             session.run();
         }
     }

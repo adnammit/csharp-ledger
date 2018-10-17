@@ -24,6 +24,7 @@ Compile with `$ csc Ledger.cs` which generates `Ledger.exe`. Then `$ ./Ledger.ex
 
 ### TO-DO
 * add a UI
+* delete auto-login when we are done developing
 * develop more user roles (teller, manager)
 * correct use of public/private classes/methods/props?
 * struct vs class for Transaction?
