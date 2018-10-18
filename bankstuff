@@ -1,0 +1,46 @@
+[
+  {
+    "Username": "kesselboss",
+    "FirstName": "Han",
+    "LastName": "Solo",
+    "Type": "Client",
+    "Transactions": [
+      {
+        "Amount": 100.0,
+        "Author": "kesselboss",
+        "Timestamp": "2018-10-18T09:33:40.2092065-07:00",
+        "Note": "payday!"
+      },
+      {
+        "Amount": -20.0,
+        "Author": "kesselboss",
+        "Timestamp": "2018-10-18T09:33:49.0972273-07:00",
+        "Note": "cheeseburgers"
+      },
+      {
+        "Amount": 12000.0,
+        "Author": "kesselboss",
+        "Timestamp": "2018-10-18T09:34:29.9837837-07:00",
+        "Note": "sweet bounty"
+      },
+      {
+        "Amount": -9999.0,
+        "Author": "kesselboss",
+        "Timestamp": "2018-10-18T09:34:45.8251676-07:00",
+        "Note": "pay back Jabba"
+      },
+      {
+        "Amount": -80.0,
+        "Author": "kesselboss",
+        "Timestamp": "2018-10-18T09:35:23.1612151-07:00",
+        "Note": "wookie food"
+      },
+      {
+        "Amount": -12.98,
+        "Author": "kesselboss",
+        "Timestamp": "2018-10-18T09:42:56.5628345-07:00",
+        "Note": "lightspeed grease"
+      }
+    ]
+  }
+]
