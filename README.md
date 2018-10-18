@@ -49,21 +49,11 @@ To invoke the auto-login feature, use `$ dotnet run -l` -- otherwise just `$ dot
 * Make use of the Result struct for better error reporting
     - have printError() take the result as an arg and check for msg there?
 * Perform more cleansing of input (remove/guard against special chars, store usernames as all lower case, etc)
+* Clear keyboard input (like up, down, etc) that appear to not do anything but error when the user submits it
 * Currently there is no authentication -- make signing in more meaningful by password protecting it
 * Make sure return values are meaningful
 * Add try/catch blocks for file writing
 * Create and enforce rules about usernames and other input
-
-### STUFF TO ACTUALLY DO RIGHT NOW
-* break into multiple files
-* clean up `bankstuff`
-* replace getters/setters with properties
-* check access of all class methods/props
-    - session is done
 * Allow a filename to be specified as a command line arg
-* delete auto-login when we are done developing
-* correct use of public/private classes/methods/props?
-* struct vs class for Transaction?
-* should we store `balance` or calculate dynamically? probably store it when we load, don't store it in db
-* walk through [msdocs coding conventions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions) and make sure your code flies
+* Check [msdocs coding conventions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions) and make sure it's all up to snuff
 * [Json.NET Samples](https://www.newtonsoft.com/json/help/html/Samples.htm)

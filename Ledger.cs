@@ -93,7 +93,7 @@ namespace Ledger {
                     transaction.printInfo();
                 }
             } else {
-                Console.WriteLine("You have no transactions yet. Let's get to banking!");
+                Console.WriteLine("You don't have any transactions yet. Let's get to banking!");
             }
         }
     }
@@ -521,27 +521,13 @@ namespace Ledger {
             else
                 this.printError(result.message);
         }
-
-        ////// debug
-        public void printUserData() {
-            Console.WriteLine();
-            Console.WriteLine("We got {0} users:", this.users.Count);
-            foreach (var user in this.users) {
-                Console.WriteLine("Welcome user {0}", user.Username);
-            }
-        }
     }
-
 
     public class Application {
         static void Main(string[] args) {
             // our lovely 'database'
             string file = "bankstuff";
             Session session = new Session(file);
-
-            ///// debug
-            session.printUserData();
-
             // If we passed in the auto-login flag, login as our test user
             if(args.Length > 0 && (args[0].Equals("-l") || args[0].Equals("--auto-login")))
                 session.logIn("kesselboss", "Han", "Solo");
